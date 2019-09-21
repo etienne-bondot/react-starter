@@ -1,0 +1,337 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots AuthForm should display the signin formular 1`] = `
+<form
+  className="signin-form"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <h2
+    className="align-center fz-30"
+  >
+    Sign in to Rabbit
+  </h2>
+  <div
+    className="mt2"
+  >
+    <label
+      className="form-label dpb"
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      className="form-input"
+      disabled={false}
+      name="email"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      type="email"
+      value=""
+    />
+  </div>
+  <div
+    className="mt2"
+  >
+    <label
+      className="form-label dpb"
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <input
+      className="form-input"
+      disabled={false}
+      name="password"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      type="password"
+      value=""
+    />
+  </div>
+  <button
+    className="btn-primary mt2 full-width"
+    disabled={false}
+    type="submit"
+  >
+    Signin
+  </button>
+  <div
+    className="mt2"
+  >
+    <a
+      href="#/signup"
+      onClick={[Function]}
+    >
+      New to Rabbit ? Create an account
+    </a>
+  </div>
+</form>
+`;
+
+exports[`Storyshots AuthForm should display the signup formular 1`] = `
+<form
+  className="signin-form"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <h2
+    className="align-center fz-30"
+  >
+    Join Rabbit
+  </h2>
+  <div
+    className="mt2"
+  >
+    <label
+      className="form-label dpb"
+      htmlFor="email"
+    >
+      Email
+    </label>
+    <input
+      className="form-input"
+      disabled={false}
+      name="email"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      type="email"
+      value=""
+    />
+  </div>
+  <div
+    className="mt2"
+  >
+    <label
+      className="form-label dpb"
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <input
+      className="form-input"
+      disabled={false}
+      name="password"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      type="password"
+      value=""
+    />
+  </div>
+  <button
+    className="btn-primary mt2 full-width"
+    disabled={false}
+    type="submit"
+  >
+    Signup
+  </button>
+  <div
+    className="mt2"
+  >
+    <a
+      href="#/signin"
+      onClick={[Function]}
+    >
+      Already have an account ? Sign in
+    </a>
+  </div>
+</form>
+`;
+
+exports[`Storyshots Button primary 1`] = `
+<button
+  className="btn-primary"
+  disabled={false}
+  type="button"
+>
+  this is a button
+</button>
+`;
+
+exports[`Storyshots Button with emoji 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "border": "1px solid #eee",
+      "borderRadius": 3,
+      "cursor": "pointer",
+      "fontSize": 15,
+      "margin": 10,
+      "padding": "3px 10px",
+    }
+  }
+  type="button"
+>
+  <span
+    aria-label="so cool"
+    role="img"
+  >
+    😀 😎 👍 💯
+  </span>
+</button>
+`;
+
+exports[`Storyshots Button with text 1`] = `
+<button
+  onClick={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#FFFFFF",
+      "border": "1px solid #eee",
+      "borderRadius": 3,
+      "cursor": "pointer",
+      "fontSize": 15,
+      "margin": 10,
+      "padding": "3px 10px",
+    }
+  }
+  type="button"
+>
+  Hello Button
+</button>
+`;
+
+exports[`Storyshots Card basic 1`] = `
+<div
+  className="card crp"
+  onClick={[Function]}
+>
+  <div
+    className="card-preview-wrapper"
+  >
+    <p
+      className="card-preview"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, q... Par owner-id
+    </p>
+  </div>
+  <div
+    className="card-footer"
+  >
+    <div
+      className="card-date fz-12"
+    >
+      <p>
+        Crée le 03/10/2019
+      </p>
+      <p>
+        Dernière mise à jour: 03/10/2019
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Layout with Navbar 1`] = `
+<div
+  className="layout"
+>
+  <div
+    className="navbar"
+  >
+    <a
+      href="#/"
+      onClick={[Function]}
+    >
+      <img
+        alt="Rabbit ico"
+        className="rabbit-ico"
+        src="assets/ico/rabbit.png"
+      />
+    </a>
+    <div
+      className="crp"
+      onClick={[Function]}
+    >
+      Signin
+    </div>
+  </div>
+  Loram Ipsum
+  <div
+    className="healthcheck-status"
+  />
+</div>
+`;
+
+exports[`Storyshots Layout without Navbar 1`] = `
+<div
+  className="layout"
+>
+  Loram Ipsum
+  <div
+    className="healthcheck-status"
+  />
+</div>
+`;
+
+exports[`Storyshots Popin with header 1`] = `
+<div
+  className="popin"
+>
+  <section
+    className="popin-main"
+  >
+    <div
+      className="popin-header-title"
+    >
+      Title
+    </div>
+    <div
+      className="popin-body-content"
+    >
+      Body content
+    </div>
+    <div
+      className="popin-actions"
+    >
+      <button
+        className="btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        close
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Popin with header passing title as property 1`] = `
+<div
+  className="popin"
+>
+  <section
+    className="popin-main"
+  >
+    <div
+      className="popin-header-title"
+    >
+      Title
+    </div>
+    <div
+      className="popin-body-content"
+    >
+      Body content
+    </div>
+    <div
+      className="popin-actions"
+    >
+      <button
+        className="btn-primary"
+        disabled={false}
+        onClick={[Function]}
+        type="button"
+      >
+        close
+      </button>
+    </div>
+  </section>
+</div>
+`;

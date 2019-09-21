@@ -1,0 +1,97 @@
+aliases:
+  restore_cache: &restore_cache
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "package.json" }}
+        - v1-dependencies-
+
+  install_node_modules: &install_node_modules
+    run:
+      name: "Install Dependencies"
+      command: yarn install
+
+  save_cache: &save_cache
+    save_cache:
+      paths:
+        - node_modules
+      key: v1-dependencies-{{ checksum "package.json" }}
+
+executors:
+  rabbit-executor:
+    docker:
+      - image: circleci/node:10.15.3
+    working_directory: ~/rabbit
+
+version: 2.1
+
+jobs:
+  install_dependencies:
+    executor: rabbit-executor
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - <<: *save_cache
+
+  test:
+    executor: rabbit-executor
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - run:
+          name: "Run Tests and Collect Coverage Reports"
+          command: yarn test:coverage
+      - store_artifacts:
+          path: coverage
+
+  build:
+    executor: rabbit-executor
+    steps:
+      - checkout
+      - <<: *restore_cache
+      - <<: *install_node_modules
+      - run:
+          name: "Build Production Bundle"
+          command: yarn build:prod
+      - persist_to_workspace:
+          root: ~/rabbit
+          paths:
+            - .
+
+  # deploy:
+  #   executor: rabbit-executor
+  #   steps:
+  #     - checkout
+  #     - attach_workspace:
+  #         at: ~/rabbit
+  #     - <<: *restore_cache
+  #     - <<: *install_node_modules
+  #     - run:
+  #         name: "Install Netlify CLI"
+  #         command: sudo npm install netlify-cli -g
+  #     - run:
+  #         name: Deploy to Netlify
+  #         command: netlify deploy --dir=/home/circleci/react-starter/public -p
+
+workflows:
+  version: 2
+  test_build_and_deploy:
+    jobs:
+      - install_dependencies
+      - test:
+          requires:
+            - install_dependencies
+      - build:
+          requires:
+            - test
+          filters:
+            branches:
+              only: develop
+      # - deploy:
+      #     context: ReactStarterNetlify
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: develop

@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread",
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "app": "./src/app",
+          "assets": "./assets"
+        }
+      }
+    ],
+    "babel-plugin-macros"
+  ],
+  "presets": [
+    "@babel/env",
+    "@babel/react",
+    "@babel/typescript"
+  ]
+}

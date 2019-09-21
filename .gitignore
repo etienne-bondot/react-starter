@@ -1,0 +1,16 @@
+coverage/
+cypress/screenshots/
+cypress/videos/
+dist/
+node_modules/
+public/
+
+# Optional npm cache directory
+.npm
+yarn-error.log
+
+# Optional eslint cache
+.eslintcache
+
+# Others
+.DS_Store
