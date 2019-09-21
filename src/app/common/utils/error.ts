@@ -1,7 +1,7 @@
 export const handleGenericError = (
   errorMessage: string,
   setFieldError: (fieldName: string, error: string) => void,
-  fieldName?: string,
+  fieldName?: string
 ): void => {
   switch (errorMessage) {
     case 'confict':

@@ -1,5 +1,3 @@
-
-
 import React, {useState, useEffect, useRef} from 'react';
 
 export const useInterval = (callback: () => void | Promise<void>, delay: number): void => {

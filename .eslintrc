@@ -28,7 +28,7 @@
     "FileReader": true,
     "Blob": true,
     "navigator": true,
-    "fetch": true
+    "fetch": true,
   },
   settings:  {
     react:  {

@@ -19,7 +19,9 @@ const handleErrors = response => {
 
 export const request = (
   endpoint: string,
-  options: {body?: Object; headers?: Object; method?: string; private?: boolean} = {private: true}
+  options: {body?: Record<string, any>; headers?: Record<string, any>; method?: string; private?: boolean} = {
+    private: true
+  }
 ): Promise<any> => {
   const uri = `${Const.API_URL}${endpoint}`;
   const accessToken = localStorage.getItem(Const.COOKIES.ACCESS_TOKEN) || '';

@@ -3,7 +3,4 @@ import ReactDOM from 'react-dom';
 
 import Router from 'src/router';
 
-ReactDOM.render(
-    <RabbitRouter />,
-  document.getElementById('rabbit')
-);
+ReactDOM.render(<Router />, document.getElementById('app'));

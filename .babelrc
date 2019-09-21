@@ -6,7 +6,7 @@
       "module-resolver",
       {
         "alias": {
-          "app": "./src/app",
+          "src": "./src/app",
           "assets": "./assets"
         }
       }

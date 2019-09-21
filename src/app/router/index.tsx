@@ -1,16 +1,16 @@
 import React, {ReactNode} from 'react';
-import {HashRouter as Router, Route, Switch} from 'react-router-dom';
+import {HashRouter as ReactRouter, Route, Switch} from 'react-router-dom';
 
 // Pages
 import Sandbox from 'rabbit/pages/sandbox';
 
-const RabbitRouter = (): ReactNode => (
-  <Router>
+const Router = (): ReactNode => (
+  <ReactRouter>
     <Switch>
       <Route exact path="/" component={Sandbox} />
-      <Route component={Home} />
+      <Route component={Sandbox} />
     </Switch>
-  </Router>
+  </ReactRouter>
 );
 
 export default Router;
