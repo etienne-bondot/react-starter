@@ -1,6 +1,6 @@
-import Const from 'rabbit/const';
+import Const from 'src/const';
 
-import {toConsole} from 'rabbit/common/utils/log';
+import {toConsole} from 'src/common/utils/log';
 
 const defaultHeaders = {
   Accept: 'application/json',

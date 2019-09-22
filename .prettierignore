@@ -1,6 +1,6 @@
 *.snap
-*.map
 node_modules
+.vscode
 package.json
 package-lock.json
 *.json

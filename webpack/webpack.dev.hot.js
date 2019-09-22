@@ -10,7 +10,7 @@ const webpackDevConfig = require('./webpack.dev');
 
 const serverConf = merge.smart(webpackDevConfig, {
   entry: {
-    app: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server']
+    app: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server'],
   },
   mode: 'development',
   devtool: 'cheap-module-eval-source-map',
@@ -18,12 +18,12 @@ const serverConf = merge.smart(webpackDevConfig, {
     contentBase: path.join(webpackConfig.absoluteBase, 'public'),
     historyApiFallback: true,
     hot: true,
-    port: 8080
+    port: 8080,
   },
   performance: {
-    hints: false
+    hints: false,
   },
-  plugins: [new HotModuleReplacementPlugin()]
+  plugins: [new HotModuleReplacementPlugin()],
 });
 
 module.exports = serverConf;

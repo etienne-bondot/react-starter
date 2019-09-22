@@ -14,7 +14,7 @@ export const COMMON_CLASSES = {
   // Primary is not necessary but needed for retrocompatibility
   SELECT: 'form-select primary',
   SELECT_NOT_CHOSEN: 'not-chosen',
-  TEXTAREA: 'form-textarea'
+  TEXTAREA: 'form-textarea',
 };
 
 export function format(...args: ({[className: string]: boolean} | string)[]): string {

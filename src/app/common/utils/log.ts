@@ -1,4 +1,4 @@
-import {getEnv} from 'rabbit/common/utils/env';
+import {getEnv} from 'src/common/utils/env';
 
 export const toConsole = (level: 'error' | 'warn' | 'info', message: string) => {
   const env = getEnv();

@@ -2,7 +2,7 @@ import React, {ReactNode} from 'react';
 import {HashRouter as ReactRouter, Route, Switch} from 'react-router-dom';
 
 // Pages
-import Sandbox from 'rabbit/pages/sandbox';
+import Sandbox from 'src/pages/sandbox';
 
 const Router = (): ReactNode => (
   <ReactRouter>

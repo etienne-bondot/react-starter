@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 
-import {get} from 'rabbit/api/healthcheck';
+import {get} from 'src/api/healthcheck';
 
-import {format} from 'rabbit/common/utils/class-name';
-import {toConsole} from 'rabbit/common/utils/log';
+import {format} from 'src/common/utils/class-name';
+import {toConsole} from 'src/common/utils/log';
 
-import {useInterval} from 'rabbit/common/hooks';
+import {useInterval} from 'src/common/hooks';
 
 const HealthCheck = (): Node => {
   const [online, setOnline] = useState(false);
@@ -21,7 +21,7 @@ const HealthCheck = (): Node => {
   };
 
   const className = format('healthcheck-status', {
-    online
+    online,
   });
 
   useInterval(getStatus, 25000);

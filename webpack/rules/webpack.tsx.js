@@ -12,17 +12,17 @@ function getRulesConf() {
             loader: 'babel-loader',
             options: {
               cacheDirectory: true,
-              plugins: ['react-hot-loader/babel']
-            }
-          }
+              plugins: ['react-hot-loader/babel'],
+            },
+          },
         },
         {
           test: /\.js$/,
           use: ['source-map-loader'],
-          enforce: 'pre'
-        }
-      ]
-    }
+          enforce: 'pre',
+        },
+      ],
+    },
   };
 }
 

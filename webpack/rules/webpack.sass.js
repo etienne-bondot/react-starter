@@ -12,26 +12,26 @@ function getRulesConf() {
           test: /\.scss$/,
           use: [
             {
-              loader: MiniCssExtractPlugin.loader
+              loader: MiniCssExtractPlugin.loader,
             },
             {
-              loader: 'css-loader'
+              loader: 'css-loader',
             },
             {
               loader: 'postcss-loader',
               ident: 'postcss',
               options: {
                 ident: 'postcss',
-                plugins: () => [postcssPresetEnv(), cssNano()]
-              }
+                plugins: () => [postcssPresetEnv(), cssNano()],
+              },
             },
             {
-              loader: 'sass-loader'
-            }
-          ]
-        }
-      ]
-    }
+              loader: 'sass-loader',
+            },
+          ],
+        },
+      ],
+    },
   };
 }
 

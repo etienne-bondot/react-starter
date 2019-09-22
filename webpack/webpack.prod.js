@@ -19,37 +19,37 @@ const webpackSassRules = require('./rules/webpack.sass')();
 const devConf = merge.smart(webpackCommon, webpackJsxRules, webpackSassRules, {
   mode: 'production',
   output: {
-    filename: '[name].js?[chunkhash]'
+    filename: '[name].js?[chunkhash]',
   },
   optimization: {
     minimizer: [
       new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: false
-      })
-    ]
+        sourceMap: false,
+      }),
+    ],
   },
   plugins: [
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin([
       {
         from: webpackConfig.assetsDir,
-        to: 'assets'
-      }
+        to: 'assets',
+      },
     ]),
     new DefinePlugin({
       API_URL: JSON.stringify('https://rabbit-api-develop.herokuapp.com'),
-      NODE_ENV: JSON.stringify('production')
+      NODE_ENV: JSON.stringify('production'),
     }),
     new HtmlWebpackPlugin({
-      template: path.join(webpackConfig.srcDir, 'index.html')
+      template: path.join(webpackConfig.srcDir, 'index.html'),
     }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
-      chunkFilename: '[id].css'
-    })
-  ]
+      chunkFilename: '[id].css',
+    }),
+  ],
 });
 
 module.exports = devConf;

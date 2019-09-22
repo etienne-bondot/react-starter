@@ -11,13 +11,13 @@ function getRulesConf(emitFile = true) {
                 emitFile,
                 name: '[path][name].[ext]?[hash]',
                 outputPath: '../public',
-                publicPath: '/'
-              }
-            }
-          ]
-        }
-      ]
-    }
+                publicPath: '/',
+              },
+            },
+          ],
+        },
+      ],
+    },
   };
 }
 
