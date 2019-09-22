@@ -18,7 +18,7 @@ const commonConf = {
   },
   resolve: {
     alias: {
-      rabbit: webpackConfig.appDir,
+      src: webpackConfig.appDir,
       assets: webpackConfig.assetsDir
     },
     extensions: ['.ts', '.tsx', '.js']
