@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -8,7 +8,7 @@ const webpackConfig = require('./webpack.config');
 
 const webpackDevConfig = require('./webpack.dev');
 
-const serverConf = merge.smart(webpackDevConfig, {
+const serverConf = merge(webpackDevConfig, {
   entry: {
     app: ['webpack-dev-server/client?http://localhost:8080', 'webpack/hot/dev-server'],
   },

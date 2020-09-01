@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -16,7 +16,7 @@ const webpackFilesRules = require('./rules/webpack.files')();
 const webpackJsxRules = require('./rules/webpack.tsx')();
 const webpackSassRules = require('./rules/webpack.sass')();
 
-const devConf = merge.smart(webpackCommon, webpackJsxRules, webpackSassRules, {
+const devConf = merge(webpackCommon, webpackJsxRules, webpackSassRules, {
   mode: 'production',
   output: {
     filename: '[name].js?[chunkhash]',

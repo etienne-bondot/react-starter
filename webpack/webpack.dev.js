@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
@@ -13,7 +13,7 @@ const webpackFilesRules = require('./rules/webpack.files')();
 const webpackJsxRules = require('./rules/webpack.tsx')();
 const webpackSassRules = require('./rules/webpack.sass')();
 
-const devConf = merge.smart(webpackCommon, webpackFilesRules, webpackJsxRules, webpackSassRules, {
+const devConf = merge(webpackCommon, webpackFilesRules, webpackJsxRules, webpackSassRules, {
   mode: 'development',
   devtool: 'inline-source-map',
   module: {},
