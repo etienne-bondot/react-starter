@@ -2,7 +2,15 @@
 
 # Summary
 
-[in progress...]
+A simple starter pack to build some apps with react. This setup include
+- React
+- Typescript + Babel as transpilers
+- Webpack as bundler
+- Eslint + Prettier as linters
+- Jest as unit testing
+- Cypress as integration testing
+- Storybook as components library
+- CicleCI as CI/CD
 
 # Commands
 
