@@ -8,12 +8,13 @@
     "build:prod": "webpack --config webpack/webpack.prod.js",
     "start:watch": "webpack-dev-server --config webpack/webpack.dev.hot.js",
     "storybook": "start-storybook",
-    "test": "concurrently \"yarn test:jest\" \"yarn test:linter\"",
+    "test": "concurrently \"yarn test:jest\" \"yarn test:linter\" \"yarn tsc\"",
     "test:coverage": "concurrently \"yarn test:jest:coverage\" \"yarn test:linter\"",
     "test:cypress": "cypress run",
     "test:jest": "jest src/**/__tests__/*.test.js",
     "test:jest:coverage": "yarn run test:jest -- --coverage --collectCoverageFrom='[\"src/**/*.{ts,tsx}\",\"!src/**/stories/*\"]'",
-    "test:linter": "eslint --cache 'src/app/**/*.tsx'"
+    "test:linter": "eslint --cache 'src/app/**/*.tsx'",
+    "tsc": "tsc"
   },
   "husky": {
     "hooks": {
@@ -21,6 +22,7 @@
     }
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.1.0",
     "html-webpack-plugin": "^4.4.1",
@@ -39,6 +41,7 @@
     "@babel/preset-typescript": "^7.10.4",
     "@storybook/addon-storyshots": "^6.0.21",
     "@storybook/react": "^6.0.21",
+    "@types/classnames": "^2.2.10",
     "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "@types/react-router-dom": "^5.1.5",

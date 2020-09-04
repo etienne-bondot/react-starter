@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, {ReactElement} from 'react';
 import {Redirect, Route} from 'react-router-dom';
 
 import Const from 'src/const';
@@ -9,11 +9,15 @@ interface Props {
   component: Node;
 }
 
-const PrivateRoute = ({exact, path, component}: Props): ReactNode => {
+const PrivateRoute = ({exact, path, component}: Props): ReactElement => {
   const accessToken = localStorage.getItem(Const.COOKIES.ACCESS_TOKEN);
-  const renderRedirect = (): Node => <Redirect to="/" />;
+  const renderRedirect = (): ReactElement => <Redirect to="/" />;
 
-  return <Route exact={exact} path={path} component={accessToken ? component : renderRedirect} />;
+  return (
+    <Route exact={exact} path={path}>
+      {accessToken ? component : renderRedirect}
+    </Route>
+  );
 };
 
 export default PrivateRoute;

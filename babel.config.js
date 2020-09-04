@@ -9,8 +9,8 @@ module.exports = api => {
         'module-resolver',
         {
           alias: {
-            src: './src/app',
-            assets: './assets',
+            "src": './src/app',
+            "assets": './assets',
           },
         },
       ],

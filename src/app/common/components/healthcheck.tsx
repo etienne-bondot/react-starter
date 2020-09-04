@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React, {ReactElement, useState} from 'react';
+import classNames from 'classnames';
 
 import {get} from 'src/api/healthcheck';
 
-import {format} from 'src/common/utils/class-name';
 import {toConsole} from 'src/common/utils/log';
 
 import {useInterval} from 'src/common/hooks';
 
-const HealthCheck = (): Node => {
+const HealthCheck = (): ReactElement => {
   const [online, setOnline] = useState(false);
 
   const getStatus = async (): Promise<void> => {
@@ -20,7 +20,7 @@ const HealthCheck = (): Node => {
     }
   };
 
-  const className = format('healthcheck-status', {
+  const className = classNames('healthcheck-status', {
     online,
   });
 

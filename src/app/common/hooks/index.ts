@@ -1,22 +1,29 @@
-import React, {useState, useEffect, useRef} from 'react';
+import {useEffect, useRef} from 'react';
 
-export const useInterval = (callback: () => void | Promise<void>, delay: number): void => {
-  const savedCallback = useRef();
+export const useInterval = (callback: any, delay: number): any => {
+  const savedCallback = useRef(null);
 
   // Remember the latest callback.
   useEffect(() => {
-    savedCallback.current = callback;
+    if (savedCallback) {
+      savedCallback.current = callback;
+    }
   }, [callback]);
 
   // Set up the interval.
   useEffect(() => {
     function tick() {
-      savedCallback.current();
+      if (savedCallback) {
+        // @ts-expect-error
+        savedCallback.current();
+      }
     }
     if (delay !== null) {
       const id = setInterval(tick, delay);
       return () => clearInterval(id);
     }
+
+    return;
   }, [delay]);
 };
 
